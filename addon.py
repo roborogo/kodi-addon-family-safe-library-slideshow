@@ -17,8 +17,16 @@ TV_RATINGS = ["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA"]
 UNRATED_TOKENS = ["UNRATED", "NOT RATED", "NOTRATED", "NR", "N R"]
 
 
+def _debug_enabled():
+    try:
+        return ADDON.getSettingBool("debug_logging")
+    except Exception:
+        return ADDON.getSetting("debug_logging").lower() == "true"
+
+
 def _log(message, level=xbmc.LOGINFO):
-    xbmc.log("[FamilySafeSlideshow] {}".format(message), level)
+    if level >= xbmc.LOGWARNING or _debug_enabled():
+        xbmc.log("[FamilySafeSlideshow] {}".format(message), level)
 
 
 def _get_setting_bool(key, default=False):
@@ -188,6 +196,7 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
         if not force and now - self._last_refresh < self._settings.refresh_minutes * 60:
             return
         self._settings.reload()
+        _log("Reloading library images (force={})".format(force))
         self._last_refresh = now
         self._images = self._fetch_images()
         if not self._images:
@@ -202,6 +211,7 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
                 "VideoLibrary.GetMovies",
                 {"properties": ["art", "mpaa"]},
             ).get("movies", [])
+            _log("Movies fetched: {}".format(len(movies)))
             images.extend(self._collect_images(movies, self._settings.allowed_movies))
 
         if self._settings.include_tvshows:
@@ -209,6 +219,7 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
                 "VideoLibrary.GetTVShows",
                 {"properties": ["art", "mpaa"]},
             ).get("tvshows", [])
+            _log("TV shows fetched: {}".format(len(shows)))
             images.extend(self._collect_images(shows, self._settings.allowed_tv))
 
         unique_images = []
@@ -218,6 +229,7 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
                 unique_images.append(image)
 
         random.shuffle(unique_images)
+        _log("Images available after filtering: {}".format(len(unique_images)))
         return unique_images
 
     def _collect_images(self, items, allowed_ratings):
@@ -251,6 +263,7 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
 
 
 def run():
+    _log("Starting screensaver window")
     window = SlideshowWindow("Slideshow.xml", ADDON_PATH, "default", "1080i")
     window.doModal()
     del window
