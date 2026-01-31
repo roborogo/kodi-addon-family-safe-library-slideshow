@@ -1,6 +1,8 @@
 # Family-Safe Library Slideshow
 
-![Family-Safe Library Slideshow logo](family-safe-library-slideshow.png)
+<div align="center">
+  <img src="family-safe-library-slideshow.png" alt="Family-Safe Library Slideshow logo" width="50%">
+</div>
 
 A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart and posters directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
