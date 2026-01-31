@@ -4,10 +4,10 @@
   <img src="family-safe-library-slideshow.png" alt="Family-Safe Library Slideshow logo" width="50%">
 </div>
 
-A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart and posters directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
+A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
 ## Version
-Current version: 1.0.3
+Current version: 1.0.4
 Versioning: patch for fixes, minor for new features, major for breaking changes.
 
 ## Features
@@ -23,10 +23,14 @@ Versioning: patch for fixes, minor for new features, major for breaking changes.
 These steps install the addon from a local ZIP or folder without a repository.
 
 ### Option A: ZIP install (recommended)
-1. From this repo root, create a ZIP of the addon folder contents:
+1. From this repo root, create a ZIP that contains the addon folder:
    ```bash
    cd /mnt/c/Users/rogen/github/kodi-addon-family-safe-library-slideshow
-   zip -r screensaver.family.safe.library.slideshow.zip addon.py addon.xml icon.png fanart.png resources
+   ./package.sh
+   ```
+   On Windows PowerShell, you can run:
+   ```powershell
+   .\package.ps1
    ```
 2. In Kodi, enable Unknown sources:
    - Settings -> System -> Add-ons -> Unknown sources -> On
@@ -59,6 +63,9 @@ Settings include:
 - Hide unrated or missing ratings
 
 ## What's New
+### 1.0.4
+- Packaging scripts now create a Kodi-compatible ZIP with the addon folder.
+
 ### 1.0.3
 - Slideshow now uses fanart only.
 
@@ -72,6 +79,9 @@ Settings include:
 - Added README versioning and changelog guidance.
 
 ## Changelog
+### 1.0.4
+- Updated packaging scripts and instructions for Kodi ZIP structure.
+
 ### 1.0.3
 - Removed poster artwork from the slideshow (fanart only).
 
@@ -90,7 +100,7 @@ Settings include:
 
 ## Notes
 - If no images appear, relax the rating filters or allow unrated content.
-- Artwork availability depends on your library having fanart/poster entries.
+- Artwork availability depends on your library having fanart entries.
 
 ## Kodi log location
 - Windows: `%APPDATA%\\Kodi\\kodi.log`
