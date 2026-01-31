@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Family-Safe Library Slideshow\n"
+"POT-Creation-Date: 2026-01-31 00:00+0000\n"
+"PO-Revision-Date: 2026-01-31 00:00+0000\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgctxt "#30000"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30001"
+msgid "Include movies"
+msgstr "Include movies"
+
+msgctxt "#30002"
+msgid "Include TV shows"
+msgstr "Include TV shows"
+
+msgctxt "#30003"
+msgid "Show fanart"
+msgstr "Show fanart"
+
+msgctxt "#30004"
+msgid "Show posters"
+msgstr "Show posters"
+
+msgctxt "#30005"
+msgid "Display time (seconds)"
+msgstr "Display time (seconds)"
+
+msgctxt "#30007"
+msgid "Refresh library (minutes)"
+msgstr "Refresh library (minutes)"
+
+msgctxt "#30010"
+msgid "Safety Filter"
+msgstr "Safety Filter"
+
+msgctxt "#30011"
+msgid "Hide unrated or missing ratings"
+msgstr "Hide unrated or missing ratings"
+
+msgctxt "#30020"
+msgid "Allowed Movie Ratings"
+msgstr "Allowed Movie Ratings"
+
+msgctxt "#30021"
+msgid "G"
+msgstr "G"
+
+msgctxt "#30022"
+msgid "PG"
+msgstr "PG"
+
+msgctxt "#30023"
+msgid "PG-13"
+msgstr "PG-13"
+
+msgctxt "#30024"
+msgid "R"
+msgstr "R"
+
+msgctxt "#30025"
+msgid "NC-17"
+msgstr "NC-17"
+
+msgctxt "#30030"
+msgid "Allowed TV Ratings"
+msgstr "Allowed TV Ratings"
+
+msgctxt "#30031"
+msgid "TV-Y"
+msgstr "TV-Y"
+
+msgctxt "#30032"
+msgid "TV-Y7"
+msgstr "TV-Y7"
+
+msgctxt "#30033"
+msgid "TV-G"
+msgstr "TV-G"
+
+msgctxt "#30034"
+msgid "TV-PG"
+msgstr "TV-PG"
+
+msgctxt "#30035"
+msgid "TV-14"
+msgstr "TV-14"
+
+msgctxt "#30036"
+msgid "TV-MA"
+msgstr "TV-MA"

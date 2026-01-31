@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">100</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <control type="image" id="100">
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <aspectratio>keep</aspectratio>
+      <animation effect="fade" time="800">Visible</animation>
+      <animation effect="fade" time="800">Hidden</animation>
+      <visible>true</visible>
+    </control>
+    <control type="image" id="101">
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <aspectratio>keep</aspectratio>
+      <animation effect="fade" time="800">Visible</animation>
+      <animation effect="fade" time="800">Hidden</animation>
+      <visible>false</visible>
+    </control>
+  </controls>
+</window>

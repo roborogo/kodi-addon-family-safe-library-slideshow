@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+  <category id="general" label="30000">
+    <setting id="include_movies" type="boolean" label="30001" default="true"/>
+    <setting id="include_tvshows" type="boolean" label="30002" default="true"/>
+    <setting id="show_fanart" type="boolean" label="30003" default="true"/>
+    <setting id="show_posters" type="boolean" label="30004" default="true"/>
+    <setting id="display_seconds" type="integer" label="30005" default="10" min="5" max="60" step="1"/>
+    <setting id="refresh_minutes" type="integer" label="30007" default="10" min="1" max="60" step="1"/>
+  </category>
+
+  <category id="safety" label="30010">
+    <setting id="hide_unrated" type="boolean" label="30011" default="true"/>
+    <setting type="lsep" label="30020"/>
+    <setting id="movie_rating_g" type="boolean" label="30021" default="true"/>
+    <setting id="movie_rating_pg" type="boolean" label="30022" default="true"/>
+    <setting id="movie_rating_pg13" type="boolean" label="30023" default="true"/>
+    <setting id="movie_rating_r" type="boolean" label="30024" default="false"/>
+    <setting id="movie_rating_nc17" type="boolean" label="30025" default="false"/>
+    <setting type="lsep" label="30030"/>
+    <setting id="tv_rating_tvy" type="boolean" label="30031" default="true"/>
+    <setting id="tv_rating_tvy7" type="boolean" label="30032" default="true"/>
+    <setting id="tv_rating_tvg" type="boolean" label="30033" default="true"/>
+    <setting id="tv_rating_tvpg" type="boolean" label="30034" default="true"/>
+    <setting id="tv_rating_tv14" type="boolean" label="30035" default="true"/>
+    <setting id="tv_rating_tvma" type="boolean" label="30036" default="false"/>
+  </category>
+</settings>
