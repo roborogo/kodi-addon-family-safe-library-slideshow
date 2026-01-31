@@ -7,13 +7,13 @@
 A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart and posters directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
 ## Version
-Current version: 1.0.2
+Current version: 1.0.3
 Versioning: patch for fixes, minor for new features, major for breaking changes.
 
 ## Features
 - Smart rating filters for movies (G, PG, PG-13, R, NC-17) and TV shows (TV-Y through TV-MA)
 - Optional protection to hide unrated or missing ratings
-- Randomized fanart/poster slideshow with smooth crossfades
+- Randomized fanart slideshow with smooth crossfades
 - Uses Kodi JSON-RPC for fast, library-native artwork access
 
 ## Requirements
@@ -51,7 +51,7 @@ Go to Add-ons -> My add-ons -> Screensavers -> Family-Safe Library Slideshow -> 
 
 Settings include:
 - Include movies / TV shows
-- Show fanart / posters
+- Show fanart
 - Display time
 - Refresh interval
 - Enable debug logging (writes extra info to `kodi.log`)
@@ -59,6 +59,9 @@ Settings include:
 - Hide unrated or missing ratings
 
 ## What's New
+### 1.0.3
+- Slideshow now uses fanart only.
+
 ### 1.0.2
 - Fixed Kodi 21 settings separator type and a shutdown action crash.
 - Prevented focus errors in the screensaver window.
@@ -69,6 +72,9 @@ Settings include:
 - Added README versioning and changelog guidance.
 
 ## Changelog
+### 1.0.3
+- Removed poster artwork from the slideshow (fanart only).
+
 ### 1.0.2
 - Fixed settings separator type for Kodi 21 settings UI.
 - Removed invalid shutdown action constant.

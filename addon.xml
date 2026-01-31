@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="screensaver.family.safe.library.slideshow"
        name="Family-Safe Library Slideshow"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="Family-Safe">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -10,7 +10,7 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">A cinematic screensaver that turns your library into a family-safe gallery.</summary>
     <description lang="en_GB">Experience your library like never before. This screensaver intelligently pulls artwork directly from your Kodi database to create a personalized slideshow of your favorite content. The standout feature is the Safety Filter system, designed specifically for families and shared living spaces. Instead of risking a "Rated R" or "TV-MA" image appearing during a family gathering, you can toggle specific content ratings on or off in the settings.</description>
-    <news lang="en_GB">1.0.2 - Fixed settings separator, removed invalid action constant, and prevented focus errors in the screensaver UI.&#10;1.0.1 - Added debug logging toggle, README updates, and Kodi log integration.</news>
+    <news lang="en_GB">1.0.3 - Slideshow now uses fanart only.&#10;1.0.2 - Fixed settings separator, removed invalid action constant, and prevented focus errors in the screensaver UI.&#10;1.0.1 - Added debug logging toggle, README updates, and Kodi log integration.</news>
     <platform>all</platform>
     <assets>
       <icon>family-safe-library-slideshow.png</icon>
