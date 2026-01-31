@@ -156,7 +156,6 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
             xbmcgui.ACTION_PREVIOUS_MENU,
             xbmcgui.ACTION_NAV_BACK,
             xbmcgui.ACTION_STOP,
-            xbmcgui.ACTION_SHUTDOWN,
         ):
             self._running = False
             self.close()
