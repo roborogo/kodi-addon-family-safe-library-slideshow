@@ -7,7 +7,7 @@
 A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
 ## Version
-Current version: 1.0.6
+Current version: 1.0.7
 Versioning: patch for fixes, minor for new features, major for breaking changes.
 
 ## Features
@@ -67,6 +67,9 @@ Settings include:
 - Hide unrated or missing ratings
 
 ## What's New
+### 1.0.7
+- Fixed PowerShell ZIP structure so Kodi can read `addon.xml`.
+
 ### 1.0.6
 - Fixed packaging scripts to use `icon.png`.
 
@@ -89,6 +92,9 @@ Settings include:
 - Added README versioning and changelog guidance.
 
 ## Changelog
+### 1.0.7
+- PowerShell packaging now zips the addon folder at the top level.
+
 ### 1.0.6
 - Packaging scripts now include `icon.png` (not the removed logo file).
 
