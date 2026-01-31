@@ -1,13 +1,13 @@
 # Family-Safe Library Slideshow
 
 <div align="center">
-  <img src="family-safe-library-slideshow.png" alt="Family-Safe Library Slideshow logo" width="50%">
+  <img src="icon.png" alt="Family-Safe Library Slideshow logo" width="50%">
 </div>
 
 A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
 ## Version
-Current version: 1.0.4
+Current version: 1.0.5
 Versioning: patch for fixes, minor for new features, major for breaking changes.
 
 ## Features
@@ -63,6 +63,9 @@ Settings include:
 - Hide unrated or missing ratings
 
 ## What's New
+### 1.0.5
+- Added icon and fanart assets.
+
 ### 1.0.4
 - Packaging scripts now create a Kodi-compatible ZIP with the addon folder.
 
@@ -79,6 +82,9 @@ Settings include:
 - Added README versioning and changelog guidance.
 
 ## Changelog
+### 1.0.5
+- Added icon and fanart assets.
+
 ### 1.0.4
 - Updated packaging scripts and instructions for Kodi ZIP structure.
 
