@@ -31,11 +31,27 @@ foreach ($item in $items) {
 }
 
 try {
-Push-Location $tempDir
-Compress-Archive -Path $addonId -DestinationPath (Join-Path $root $zipName)
-Pop-Location
-Remove-Item $tempDir -Recurse -Force
-Write-Host "Created $zipName"
+  Add-Type -AssemblyName System.IO.Compression.FileSystem
+  $zipPath = Join-Path $root $zipName
+  [System.IO.Compression.ZipFile]::CreateFromDirectory($tempDir, $zipPath)
+
+  $zip = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
+  $requiredEntry = "$addonId/addon.xml"
+  $entryFound = $false
+  foreach ($entry in $zip.Entries) {
+    $normalized = $entry.FullName -replace '\\\\', '/'
+    if ($normalized -eq $requiredEntry) {
+      $entryFound = $true
+      break
+    }
+  }
+  $zip.Dispose()
+  if (-not $entryFound) {
+    throw "Zip validation failed: missing $requiredEntry"
+  }
+
+  Remove-Item $tempDir -Recurse -Force
+  Write-Host "Created $zipName"
 } catch {
   Write-Error $_
   if (Test-Path $tempDir) {
