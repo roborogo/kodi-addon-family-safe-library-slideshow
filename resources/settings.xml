@@ -12,13 +12,13 @@
 
   <category id="safety" label="30010">
     <setting id="hide_unrated" type="boolean" label="30011" default="true"/>
-    <setting type="lsep" label="30020"/>
+    <setting type="separator" label="30020"/>
     <setting id="movie_rating_g" type="boolean" label="30021" default="true"/>
     <setting id="movie_rating_pg" type="boolean" label="30022" default="true"/>
     <setting id="movie_rating_pg13" type="boolean" label="30023" default="true"/>
     <setting id="movie_rating_r" type="boolean" label="30024" default="false"/>
     <setting id="movie_rating_nc17" type="boolean" label="30025" default="false"/>
-    <setting type="lsep" label="30030"/>
+    <setting type="separator" label="30030"/>
     <setting id="tv_rating_tvy" type="boolean" label="30031" default="true"/>
     <setting id="tv_rating_tvy7" type="boolean" label="30032" default="true"/>
     <setting id="tv_rating_tvg" type="boolean" label="30033" default="true"/>

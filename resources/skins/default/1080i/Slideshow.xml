@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol always="true">100</defaultcontrol>
   <allowoverlay>no</allowoverlay>
   <controls>
     <control type="image" id="100">
@@ -11,6 +10,7 @@
       <aspectratio>keep</aspectratio>
       <animation effect="fade" time="800">Visible</animation>
       <animation effect="fade" time="800">Hidden</animation>
+      <focusable>false</focusable>
       <visible>true</visible>
     </control>
     <control type="image" id="101">
@@ -21,6 +21,7 @@
       <aspectratio>keep</aspectratio>
       <animation effect="fade" time="800">Visible</animation>
       <animation effect="fade" time="800">Hidden</animation>
+      <focusable>false</focusable>
       <visible>false</visible>
     </control>
   </controls>
