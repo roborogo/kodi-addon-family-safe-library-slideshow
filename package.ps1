@@ -31,9 +31,11 @@ foreach ($item in $items) {
 }
 
 try {
-  Compress-Archive -Path $addonDir -DestinationPath (Join-Path $root $zipName)
-  Remove-Item $tempDir -Recurse -Force
-  Write-Host "Created $zipName"
+Push-Location $tempDir
+Compress-Archive -Path $addonId -DestinationPath (Join-Path $root $zipName)
+Pop-Location
+Remove-Item $tempDir -Recurse -Force
+Write-Host "Created $zipName"
 } catch {
   Write-Error $_
   if (Test-Path $tempDir) {
