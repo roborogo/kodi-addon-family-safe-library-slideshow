@@ -1,3 +1,6 @@
+param(
+  [switch]$Pause
+)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $addonId = 'screensaver.family.safe.library.slideshow'
@@ -16,7 +19,7 @@ New-Item -ItemType Directory -Path $addonDir | Out-Null
 $items = @(
   'addon.py',
   'addon.xml',
-  'family-safe-library-slideshow.png',
+  'icon.png',
   'fanart.png',
   'resources',
   'LICENSE',
@@ -27,6 +30,20 @@ foreach ($item in $items) {
   Copy-Item -Path (Join-Path $root $item) -Destination $addonDir -Recurse -Force
 }
 
-Compress-Archive -Path $addonDir -DestinationPath (Join-Path $root $zipName)
-Remove-Item $tempDir -Recurse -Force
-Write-Host "Created $zipName"
+try {
+  Compress-Archive -Path $addonDir -DestinationPath (Join-Path $root $zipName)
+  Remove-Item $tempDir -Recurse -Force
+  Write-Host "Created $zipName"
+} catch {
+  Write-Error $_
+  if (Test-Path $tempDir) {
+    Remove-Item $tempDir -Recurse -Force
+  }
+  if (-not $Pause) {
+    $Pause = $true
+  }
+}
+
+if ($Pause) {
+  Read-Host "Press Enter to exit"
+}
