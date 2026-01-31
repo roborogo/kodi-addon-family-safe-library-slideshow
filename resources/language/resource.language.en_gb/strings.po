@@ -24,10 +24,6 @@ msgctxt "#30003"
 msgid "Show fanart"
 msgstr "Show fanart"
 
-msgctxt "#30004"
-msgid "Show posters"
-msgstr "Show posters"
-
 msgctxt "#30005"
 msgid "Display time (seconds)"
 msgstr "Display time (seconds)"

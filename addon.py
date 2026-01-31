@@ -110,7 +110,6 @@ class Settings(object):
         self.include_movies = _get_setting_bool("include_movies", True)
         self.include_tvshows = _get_setting_bool("include_tvshows", True)
         self.show_fanart = _get_setting_bool("show_fanart", True)
-        self.show_posters = _get_setting_bool("show_posters", True)
         self.display_seconds = max(5, _get_setting_int("display_seconds", 10))
         self.refresh_minutes = max(1, _get_setting_int("refresh_minutes", 10))
         self.hide_unrated = _get_setting_bool("hide_unrated", True)
@@ -241,10 +240,6 @@ class SlideshowWindow(xbmcgui.WindowXMLDialog):
                 fanart = _resolve_image_path(art.get("fanart"))
                 if fanart:
                     collected.append(fanart)
-            if self._settings.show_posters:
-                poster = _resolve_image_path(art.get("poster"))
-                if poster:
-                    collected.append(poster)
         return collected
 
     def _show_image(self, image):
