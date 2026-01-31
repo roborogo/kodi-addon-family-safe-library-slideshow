@@ -11,7 +11,7 @@ TMP_DIR=$(mktemp -d)
 ADDON_DIR="${TMP_DIR}/${ADDON_ID}"
 
 mkdir -p "${ADDON_DIR}"
-cp -R addon.py addon.xml family-safe-library-slideshow.png fanart.png resources LICENSE README.md "${ADDON_DIR}"
+cp -R addon.py addon.xml icon.png fanart.png resources LICENSE README.md "${ADDON_DIR}"
 
 cd "${TMP_DIR}"
 zip -r "${ZIP_NAME}" "${ADDON_ID}"
