@@ -7,7 +7,7 @@
 A cinematic Kodi screensaver that turns your Movies and TV Shows library artwork into a family-safe slideshow. It pulls fanart directly from the Kodi database and filters images by MPAA/TV ratings so you can safely display content in shared spaces.
 
 ## Version
-Current version: 1.0.9
+Current version: 1.1.0
 Versioning: patch for fixes, minor for new features, major for breaking changes.
 
 ## Features
@@ -67,6 +67,9 @@ Settings include:
 - Hide unrated or missing ratings
 
 ## What's New
+### 1.1.0
+- Added a black background to avoid Kodi UI flashes between images.
+
 ### 1.0.9
 - Fixed PowerShell ZIP validation on Windows path separators.
 
@@ -98,6 +101,9 @@ Settings include:
 - Added README versioning and changelog guidance.
 
 ## Changelog
+### 1.1.0
+- Added a solid black backdrop behind slideshow images.
+
 ### 1.0.9
 - Normalized ZIP entry paths in `package.ps1` validation.
 
