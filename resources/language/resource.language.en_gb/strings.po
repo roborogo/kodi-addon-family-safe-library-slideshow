@@ -36,6 +36,10 @@ msgctxt "#30007"
 msgid "Refresh library (minutes)"
 msgstr "Refresh library (minutes)"
 
+msgctxt "#30008"
+msgid "Enable debug logging"
+msgstr "Enable debug logging"
+
 msgctxt "#30010"
 msgid "Safety Filter"
 msgstr "Safety Filter"

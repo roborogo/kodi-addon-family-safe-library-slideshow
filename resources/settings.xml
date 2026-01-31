@@ -7,6 +7,7 @@
     <setting id="show_posters" type="boolean" label="30004" default="true"/>
     <setting id="display_seconds" type="integer" label="30005" default="10" min="5" max="60" step="1"/>
     <setting id="refresh_minutes" type="integer" label="30007" default="10" min="1" max="60" step="1"/>
+    <setting id="debug_logging" type="boolean" label="30008" default="false"/>
   </category>
 
   <category id="safety" label="30010">
